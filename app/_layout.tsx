@@ -1,3 +1,4 @@
+import { initTodoTable } from "@/db/dbService";
 import {
   DarkTheme,
   DefaultTheme,
@@ -11,6 +12,8 @@ import "react-native-reanimated";
 import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function RootLayout() {
+  initTodoTable();
+
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
